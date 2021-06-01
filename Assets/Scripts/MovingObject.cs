@@ -15,6 +15,7 @@ public class MovingObject : MonoBehaviour
     }
 
     void Update(){
+        if( period <= Mathf.Epsilon) period=2;
         float cycles = Time.time / period; // The variable cycles gets bigger with time
 
         const float tau = Mathf.PI * 2; // Constant value of 2pi
